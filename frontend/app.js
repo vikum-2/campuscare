@@ -1,5 +1,4 @@
-const API_URL = "http://localhost:3000";
-
+const API_URL = "";
 // Submit ticket
 document.getElementById("ticketForm").addEventListener("submit", async (event) => {
     event.preventDefault();

@@ -1,0 +1,13 @@
+
+services:
+  campuscare:
+    build: .
+    container_name: campuscare
+    ports:
+      - "3002:3000"
+    environment:
+      - DATABASE_PATH=/app/data/campuscare.db
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+

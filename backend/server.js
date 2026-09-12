@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json());
 
 // Database
-const db = new Database("campuscare.db");
-
+const dbPath = process.env.DATABASE_PATH || path.join(__dirname, "../data/campuscare.db");
+const db = new Database(dbPath);
 // Create tickets table
 db.exec(`
     CREATE TABLE IF NOT EXISTS tickets (
